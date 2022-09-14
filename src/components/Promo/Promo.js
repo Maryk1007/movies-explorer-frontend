@@ -7,7 +7,7 @@ function Promo(){
         <img
           className="promo__logo"
           src={promo_logo}
-          alt=""
+          alt="Повторяющиеся буквы О и С"
         />
       </section>
   );
