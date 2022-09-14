@@ -1,0 +1,26 @@
+.promo {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 183px 0px 40px;
+  background: #073042;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.promo__title{
+  margin: 0 10px 60px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.26;
+  letter-spacing: -0.04em;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.promo__logo {
+  margin: 0;
+  width: 320px;
+  height: 230px;
+  opacity: 0.7;
+}
