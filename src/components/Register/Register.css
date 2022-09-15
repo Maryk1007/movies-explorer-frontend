@@ -19,7 +19,6 @@
 }
 
 .form__container {
-  position: relative;
   width: 260px;
 }
 
@@ -71,7 +70,6 @@
   border-radius: 3px;
   font-size: 12px;
   line-height: 1.25;
-  margin-top: 222px;
   margin-bottom: 15px;
   background: #4285F4;
   border: none;
@@ -79,6 +77,9 @@
   color: #FFFFFF;
   cursor: pointer;
   transition: opacity .3s ease-in;
+}
+.form__button_type_register {
+  margin-top: 222px;
 }
 
 .form__button:hover {

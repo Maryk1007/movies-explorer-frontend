@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import { NavLink } from 'react-router-dom';
 
-function Register() {
+function Login() {
   // const inputRef = useRef(true);
   const [isContentSubmitButton] = useState('Зарегистрироваться');
   const [data, setData] = useState({
@@ -38,24 +38,12 @@ function Register() {
 
   return (
     <section className="auth">
-      <h2 className="auth__title">Добро пожаловать!</h2>
+      <h2 className="auth__title">Рады видеть!</h2>
       <form
         className="form"
         name="register"
         onSubmit={handleSubmit}
         noValidate>
-          <div className="form__container">
-            <p className='form__label'>Имя</p>
-            <input
-              className="form__input"
-              minLength={2}
-              maxLength={30}
-              type="text"
-              name="name"
-              id="name-input"
-              required />
-            <span className='form__field-error' id="error-email"></span>
-          </div>
           <div className="form__container">
             <p className='form__label'>E-mail</p>
             <input
@@ -81,15 +69,15 @@ function Register() {
             <span className='form__field-error' id="error-email"></span>
           </div>
         <button
-          className="form__button form__button_type_register"
+          className="form__button form__button_type_login"
           type="submit"
           name="submit">{isContentSubmitButton}</button>
       </form>
-      <p className='auth__logintip'>Уже зарегистрированы?
-        <NavLink to="/signin" className="auth__login-link"> Войти</NavLink>
+      <p className='auth__logintip'>Еще не зарегистрированы?
+        <NavLink to="/signup" className="auth__login-link"> Регистрация</NavLink>
       </p>
     </section>
   )
 }
 
-export default Register;
+export default Login;

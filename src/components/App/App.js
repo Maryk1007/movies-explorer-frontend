@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import Register from '../Register/Register';
-// import Login from '../Login';
+import Login from '../Login/Login';
 // import Movies from '../Movies';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
@@ -57,6 +57,9 @@ function App() {
         </Route>
         <Route path="/signup"
           element={<Register location={pathname}/>}>
+        </Route>
+        <Route path="/signin"
+          element={<Login location={pathname}/>}>
         </Route>
         <Route exact path="*"
           element={<PageNotFound/>}>
