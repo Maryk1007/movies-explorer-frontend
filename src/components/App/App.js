@@ -5,6 +5,7 @@ import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
+import Profile from '../Profile/Profile';
 // import Movies from '../Movies';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
@@ -60,6 +61,9 @@ function App() {
         </Route>
         <Route path="/signin"
           element={<Login location={pathname}/>}>
+        </Route>
+        <Route path="/profile"
+          element={<Profile location={pathname}/>}>
         </Route>
         <Route exact path="*"
           element={<PageNotFound/>}>

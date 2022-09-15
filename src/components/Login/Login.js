@@ -41,7 +41,7 @@ function Login() {
       <h2 className="auth__title">Рады видеть!</h2>
       <form
         className="form"
-        name="register"
+        name="login"
         onSubmit={handleSubmit}
         noValidate>
           <div className="form__container">
@@ -66,7 +66,7 @@ function Login() {
               name="password"
               id="password-input"
               required />
-            <span className='form__field-error' id="error-email"></span>
+            <span className='form__field-error' id="error-password"></span>
           </div>
         <button
           className="form__button form__button_type_login"
