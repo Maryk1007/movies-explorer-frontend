@@ -39,6 +39,10 @@
     display: flex;
 }
 
+.header__nav_disabled {
+  display: none;
+}
+
 .header__nav_item {
     margin: 0;
     padding: 0;

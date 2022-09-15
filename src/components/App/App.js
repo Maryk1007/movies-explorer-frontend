@@ -3,7 +3,7 @@ import { Routes, Route,useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
-// import Register from '../Register';
+import Register from '../Register/Register';
 // import Login from '../Login';
 // import Movies from '../Movies';
 import PageNotFound from '../PageNotFound/PageNotFound';
@@ -21,6 +21,23 @@ function App() {
     setIsNavigationMenuOpen(false);
   }
 
+  // регистрация пользователей
+  // const handleRegister = (updateRegister) => {
+  //   return auth.register(updateRegister.email, updateRegister.password)
+  //     .then(() => {
+  //       setIsInfoTooltipOpen(true);
+  //       setIsRegistrationSuccessful(true);
+  //       history.push('/signin');
+  //     })
+  //     .catch(() => {
+  //       setIsRegistrationSuccessful(false);
+  //     })
+  //     .finally(() => {
+  //       setIsInfoTooltipOpen(true);
+  //       updateRegister.onRenderLoading(false)
+  //     })
+  // }
+
   // Установить текущий год в footer
   const getYear=()=>{
     return new Date().getFullYear();
@@ -37,6 +54,9 @@ function App() {
       <Routes>
         <Route exact path="/"
           element={<Main location={pathname}/>}>
+        </Route>
+        <Route path="/signup"
+          element={<Register location={pathname}/>}>
         </Route>
         <Route exact path="*"
           element={<PageNotFound/>}>

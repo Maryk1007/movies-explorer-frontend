@@ -4,6 +4,9 @@ import logo from '../../images/logo.svg';
 
 
 function Header({ isOpen, onClose, onClick, location }) {
+
+  const headerPromo = '/';
+
   const headerMain = [
     '/movies',
     '/saved-movies',
@@ -15,13 +18,13 @@ function Header({ isOpen, onClose, onClick, location }) {
     '/signup'
   ];
     const classNameHeader=`header ${
-      location === '/' ? 'header__promo header_active' :
+      headerPromo.includes(location) ? 'header__promo header_active' :
       headerMain.includes(location) ? 'header__main header_active' :
       headerTypeSign.includes(location) ? 'header__sign header_active' : ''
     }`;
 
     const classNameBurgerMenu=`${headerMain.includes(location) ? 'header__burger-menu' : 'header__burger-menu_disabled'}`;
-    const classNameNavigationMenu=`${headerTypeSign.includes(location) ? 'header__nav' : 'header__nav header__nav_disabled'}`;
+    const classNameNavigationMenu=`${headerPromo.includes(location) ? 'header__nav' : 'header__nav header__nav_disabled'}`;
 
     return (
     <header className={classNameHeader}>
