@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 import logo from '../../images/logo.svg';
@@ -16,9 +15,9 @@ function Header({ isOpen, onClose, onClick, location }) {
     '/signup'
   ];
     const classNameHeader=`header ${
-      location='/' ? 'header__promo' :
-      headerMain.includes(location) ? 'header__main' :
-      headerTypeSign.includes(location) ? 'header__sign' : ''
+      location === '/' ? 'header__promo header_active' :
+      headerMain.includes(location) ? 'header__main header_active' :
+      headerTypeSign.includes(location) ? 'header__sign header_active' : ''
     }`;
 
     const classNameBurgerMenu=`${headerMain.includes(location) ? 'header__burger-menu' : 'header__burger-menu_disabled'}`;

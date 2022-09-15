@@ -1,4 +1,3 @@
-import React from "react";
 import avatar from '../../images/avatar.jpg';
 import { github } from '../../utils/constants';
 

@@ -6,7 +6,7 @@ import Footer from '../Footer/Footer';
 // import Register from '../Register';
 // import Login from '../Login';
 // import Movies from '../Movies';
-// import PageNotFound from '../PageNotFound';
+import PageNotFound from '../PageNotFound/PageNotFound';
 
 
 function App() {
@@ -37,6 +37,9 @@ function App() {
       <Routes>
         <Route exact path="/"
           element={<Main location={pathname}/>}>
+        </Route>
+        <Route exact path="*"
+          element={<PageNotFound/>}>
         </Route>
       </Routes>
       <Footer
