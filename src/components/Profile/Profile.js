@@ -29,7 +29,7 @@ function Profile() {
             <span className='form-profile__field-error' id="error-name"></span>
           </div>
           <div className="form-profile__wrap">
-            <div className="form-profile__container">
+            <div className="form-profile__container form-profile__container_type_email">
               <p className='form-profile__label'>E-mail</p>
               <input
                 className="form-profile__input"
