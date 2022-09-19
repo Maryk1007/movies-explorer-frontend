@@ -1,9 +1,11 @@
-import { Link, NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
 
+import { Link } from 'react-router-dom';
+import Navigation from '../Navigation/Navigation';
 import logo from '../../images/logo.svg';
 
 
-function Header({ isOpen, onClose, onClick, location }) {
+function Header({ location, isLoggedIn }) {
 
   const headerPromo = '/';
 
@@ -23,8 +25,17 @@ function Header({ isOpen, onClose, onClick, location }) {
       headerTypeSign.includes(location) ? 'header__sign header_active' : ''
     }`;
 
-    const classNameBurgerMenu=`${headerMain.includes(location) ? 'header__burger-menu' : 'header__burger-menu_disabled'}`;
+    const classNameBurgerMenu=`${headerMain.includes(location) && isLoggedIn ? 'header__burger-menu' : 'header__burger-menu_disabled'}`;
     const classNameNavigationMenu=`${headerPromo.includes(location) ? 'header__nav' : 'header__nav header__nav_disabled'}`;
+
+    const [isNavigationMenuOpen, setIsNavigationMenuOpen] = useState(false);
+
+    const openNavigationMenu = () => {
+      setIsNavigationMenuOpen(true)
+    };
+    const closeNavigationMenu = () => {
+      setIsNavigationMenuOpen(false)
+    };
 
     return (
     <header className={classNameHeader}>
@@ -33,11 +44,14 @@ function Header({ isOpen, onClose, onClick, location }) {
       </Link>
       <nav className={classNameNavigationMenu}>
         <ul className='header__list'>
-          <li className='header__nav_item'><NavLink to={`./signup`} className="header__link">Регистрация</NavLink></li>
-          <li className='header__nav_item'><NavLink to={`./signin`} className="header__link header__link_type_button">Войти</NavLink></li>
+          <li className='header__nav_item'><Link to={`/signup`} className="header__link">Регистрация</Link></li>
+          <li className='header__nav_item'><Link to={`/signin`} className="header__link header__link_type_button">Войти</Link></li>
         </ul>
       </nav>
-      <button className={classNameBurgerMenu} type='button' onClick={onClick}></button>
+      <button className={classNameBurgerMenu} type='button' onClick={openNavigationMenu}></button>
+      <Navigation
+        isOpen={isNavigationMenuOpen}
+        onClose={closeNavigationMenu}/>
     </header>
   );
 }

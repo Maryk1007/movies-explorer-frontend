@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 function Login() {
   // const inputRef = useRef(true);
-  const [isContentSubmitButton] = useState('Зарегистрироваться');
+  const [isContentSubmitButton] = useState('Войти');
   const [data, setData] = useState({
     email: '',
     password: '',
@@ -23,7 +23,7 @@ function Login() {
 
 // изменение текста кнопки при отправке формы
   // const renderLoading = (isLoading)=>{
-  //   isLoading ? setContentSubmitButton('Регистрация...') : setContentSubmitButton('Зарегистрироваться')
+  //   isLoading ? setContentSubmitButton('Вход...') : setContentSubmitButton('Войти')
   // }
 
   // useEffect(()=>{

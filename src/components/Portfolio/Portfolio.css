@@ -44,7 +44,7 @@
   letter-spacing: -0.04em;
 }
 
-.portfolio__symbol {
+.portfolio__icon {
   background-image: url('../../images/portfolio_img.svg');
   width: 11px;
   background-repeat: no-repeat;

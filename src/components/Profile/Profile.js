@@ -21,9 +21,9 @@ function Profile() {
               <p className='form-profile__label'>Имя</p>
               <input
                 className="form-profile__input"
-                type="email"
-                name="email"
-                id="email-input"
+                type="text"
+                name="name"
+                id="name-input"
                 required />
             </div>
             <span className='form-profile__field-error' id="error-name"></span>
@@ -33,9 +33,9 @@ function Profile() {
               <p className='form-profile__label'>E-mail</p>
               <input
                 className="form-profile__input"
-                type="password"
-                name="password"
-                id="password-input"
+                type="email"
+                name="email"
+                id="email-input"
                 required />
             </div>
             <span className='form-profile__field-error' id="error-email"></span>
