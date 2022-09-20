@@ -6,7 +6,7 @@ import Footer from '../Footer/Footer';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
 import Profile from '../Profile/Profile';
-// import Movies from '../Movies';
+import Movies from '../Movies/Movies';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
 
@@ -14,30 +14,19 @@ function App() {
   const { pathname } = useLocation();
   const [isNavigationMenuOpen, setIsNavigationMenuOpen] = useState(false);
 
+  //открыть меню навигации
   const handleBurgerMenuClick = () => {
     setIsNavigationMenuOpen(true);
   };
 
+  // закрыть меню навигации
   const closeNavigationMenu = () => {
     setIsNavigationMenuOpen(false);
   }
 
-  // регистрация пользователей
-  // const handleRegister = (updateRegister) => {
-  //   return auth.register(updateRegister.email, updateRegister.password)
-  //     .then(() => {
-  //       setIsInfoTooltipOpen(true);
-  //       setIsRegistrationSuccessful(true);
-  //       history.push('/signin');
-  //     })
-  //     .catch(() => {
-  //       setIsRegistrationSuccessful(false);
-  //     })
-  //     .finally(() => {
-  //       setIsInfoTooltipOpen(true);
-  //       updateRegister.onRenderLoading(false)
-  //     })
-  // }
+  const handleSubmit = (evt)=>{
+    evt.preventDefault();
+  }
 
   // Установить текущий год в footer
   const getYear=()=>{
@@ -56,14 +45,21 @@ function App() {
         <Route exact path="/"
           element={<Main location={pathname}/>}>
         </Route>
+        <Route exact path="/movies"
+          element={<Movies location={pathname}/>}
+          onSubmit={handleSubmit}>
+        </Route>
         <Route path="/signup"
-          element={<Register location={pathname}/>}>
+          element={<Register location={pathname}/>}
+          onSubmit={handleSubmit}>
         </Route>
         <Route path="/signin"
-          element={<Login location={pathname}/>}>
+          element={<Login location={pathname}/>}
+          onSubmit={handleSubmit}>
         </Route>
         <Route path="/profile"
-          element={<Profile location={pathname}/>}>
+          element={<Profile location={pathname}/>}
+          onSubmit={handleSubmit}>
         </Route>
         <Route exact path="*"
           element={<PageNotFound/>}>

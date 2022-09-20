@@ -1,8 +1,7 @@
 import { useState, useCallback } from "react";
 import { NavLink } from 'react-router-dom';
 
-function Register() {
-  // const inputRef = useRef(true);
+function Register({onSubmit}) {
   const [isContentSubmitButton] = useState('Зарегистрироваться');
   const [data, setData] = useState({
     email: '',
@@ -16,33 +15,13 @@ function Register() {
     setData(prevState=>({...prevState, [name]: value}))
   }, [setData]);
 
-  const handleSubmit = (evt)=>{
-    evt.preventDefault();
-    // renderLoading(true);
-  }
-
-// изменение текста кнопки при отправке формы
-  // const renderLoading = (isLoading)=>{
-  //   isLoading ? setContentSubmitButton('Регистрация...') : setContentSubmitButton('Зарегистрироваться')
-  // }
-
-  // useEffect(()=>{
-  //   if(inputRef.current.value !== ''){
-  //     setData(inputRef.current.validity.valid);
-  //   }
-  // }, [inputRef.current.value])
-
-  // /** если значения введенные в поле input не валидны */
-  // const classNameSpan = `form__field-error ${!data ? 'form__field-error_visible' : ''}`
-  // const spanMessage = `${!data ? inputRef.current.validationMessage : ''}`
-
   return (
     <section className="auth">
       <h2 className="auth__title">Добро пожаловать!</h2>
       <form
         className="form"
         name="register"
-        onSubmit={handleSubmit}
+        onSubmit={onSubmit}
         noValidate>
           <div className="form__container">
             <p className='form__label'>Имя</p>

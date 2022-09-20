@@ -1,12 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-function Profile() {
-  // const inputRef = useRef(true);
-
-  const handleSubmit = (evt)=>{
-    evt.preventDefault();
-    // renderLoading(true);
-  }
+function Profile({onSubmit}) {
 
   return (
     <section className="profile">
@@ -14,7 +8,7 @@ function Profile() {
       <form
         className="form-profile"
         name="profile"
-        onSubmit={handleSubmit}
+        onSubmit={onSubmit}
         noValidate>
           <div className="form-profile__wrap">
             <div className="form-profile__container">
