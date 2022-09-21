@@ -13,7 +13,7 @@ function FilterCheckbox() {
         className='filter-checkbox__button'
         type='checkbox'
         id='checkbox-button'
-        checked={checked}
+        defaultChecked={checked}
         onChange={handleChange}>
       </input>
       <p className='filter-checkbox__label'>Короткометражки</p>
