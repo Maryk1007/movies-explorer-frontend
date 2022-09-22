@@ -16,7 +16,7 @@ function Navigation({isOpen, onClose}) {
         <Link to={'/saved-movies'} className="navigation__item navigation__link" onClick={onClose}>Сохранённые фильмы</Link>
       </ul>
       <div className="account">
-      <Link to={'/profile'} className='account__link'>
+      <Link to={'/profile'} className='account__link' onClick={onClose}>
         <div className="account__wrap">
         <div className="account__icon"></div>
         <p className="account__subtitle">Аккаунт</p>

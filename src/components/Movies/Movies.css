@@ -1,3 +1,16 @@
 .movies {
   flex: 1;
 }
+
+.movies__button {
+  padding: 0;
+  background: #FFFFFF;
+  border-radius: 6px;
+  min-width: calc(100% - 80px);
+  height: 36px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 125%;
+  margin: 0 40px 80px;
+  border: 1px solid #E8E8E8;
+}

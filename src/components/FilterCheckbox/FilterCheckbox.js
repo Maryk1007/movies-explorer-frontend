@@ -5,8 +5,8 @@ function FilterCheckbox() {
 
   const handleChange = () => {
     setChecked(!checked);
-
   };
+
   return (
     <form className='filter-checkbox'>
       <input

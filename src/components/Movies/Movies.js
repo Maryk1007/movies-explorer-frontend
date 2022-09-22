@@ -1,4 +1,5 @@
 import SearchForm from "../SearchForm/SearchFrom";
+import MoviesCardList from "../MoviesCardList/MoviesCardList";
 
 function Movies({location, onSubmit}) {
   return (
@@ -7,11 +8,8 @@ function Movies({location, onSubmit}) {
           location={location}
           onSubmit={onSubmit}
         />
-        {/* <MoviesCardList/>
-        <button
-          type="button"
-          className="movies__button button">Ещё
-        </button> */}
+        <MoviesCardList/>
+        <button className="movies__button" type="button">Ещё</button>
       </section>
   );
 }
