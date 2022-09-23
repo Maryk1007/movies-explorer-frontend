@@ -25,7 +25,7 @@ function MoviesCard({location, ...movie}) {
           <span className="movie__duration">{toTime(movie.duration)}</span>
         </div>
         <Routes>
-            <Route path="" element={
+            <Route path="*" element={
               <label className="movie-checkbox">
                 <input
                   className="movie-checkbox__default"
@@ -36,12 +36,16 @@ function MoviesCard({location, ...movie}) {
                   <span className="movie-checkbox__custom"></span>
               </label>}>
             </Route>
-            {/* <Route path="" element={
-              <button
-                type="button"
-                aria-label="Удалить фильм из сохраненных"
-                className="movie__checkbox movie__checkbox_delete">
-              </button>}>
+            {/* <Route path="/saved-movies" element={
+              <label className="movie-checkbox">
+                <input
+                  className="movie-checkbox__default"
+                  type='checkbox'
+                  id='movie-checkbox'
+                  defaultChecked={!checked}
+                  onChange={handleChange}/>
+                  <span className="movie-checkbox__custom_saved"></span>
+              </label>}>
             </Route> */}
           </Routes>
       </li>

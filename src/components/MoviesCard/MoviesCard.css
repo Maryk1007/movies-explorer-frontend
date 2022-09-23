@@ -70,8 +70,8 @@
   width: 21px;
   border-radius: 50px;
 }
-
-/* .movie__checkbox_delete {
+/*
+.movie-checkbox__default:checked + .movie-checkbox__custom_saved {
   background-image: url(../../images/movie_checkbox_delete.svg);
   width: 21px;
   border-radius: 50px;

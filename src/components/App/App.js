@@ -7,6 +7,7 @@ import Register from '../Register/Register';
 import Login from '../Login/Login';
 import Profile from '../Profile/Profile';
 import Movies from '../Movies/Movies';
+import SavedMovies from '../SavedMovies/SavedMovies';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
 
@@ -45,8 +46,12 @@ function App() {
         <Route exact path="/"
           element={<Main location={pathname}/>}>
         </Route>
-        <Route exact path="/movies"
+        <Route exact path="/movies/*"
           element={<Movies location={pathname}/>}
+          onSubmit={handleSubmit}>
+        </Route>
+        <Route exact path="/saved-movies/*"
+          element={<SavedMovies location={pathname}/>}
           onSubmit={handleSubmit}>
         </Route>
         <Route path="/signup"
