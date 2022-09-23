@@ -1,3 +1,4 @@
+import {useState} from "react";
 import { Routes, Route } from "react-router-dom";
 
 function MoviesCard({location, ...movie}) {
@@ -6,6 +7,12 @@ function MoviesCard({location, ...movie}) {
     const hours = Math.trunc(time / 60);
     const minutes = time - (hours * 60)
     return hours + "ч " + minutes + "м";
+  };
+
+  const [checked, setChecked] = useState(false);
+
+  const handleChange = () => {
+    setChecked(!checked);
   };
 
   return (
@@ -19,19 +26,23 @@ function MoviesCard({location, ...movie}) {
         </div>
         <Routes>
             <Route path="" element={
-              <button
-                type="button"
-                aria-label="Сохранить фильм"
-                className="movie__checkbox movie__checkbox_default movie__checkbox_checked">
-              </button>}>
+              <label className="movie-checkbox">
+                <input
+                  className="movie-checkbox__default"
+                  type='checkbox'
+                  id='movie-checkbox'
+                  defaultChecked={checked}
+                  onChange={handleChange}/>
+                  <span className="movie-checkbox__custom"></span>
+              </label>}>
             </Route>
-            <Route path="" element={
+            {/* <Route path="" element={
               <button
                 type="button"
                 aria-label="Удалить фильм из сохраненных"
                 className="movie__checkbox movie__checkbox_delete">
               </button>}>
-            </Route>
+            </Route> */}
           </Routes>
       </li>
   );
