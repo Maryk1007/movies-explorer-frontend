@@ -37,9 +37,8 @@
 .form-profile__label {
   margin: 0;
   font-weight: 400;
-  font-size: 10px;
-  line-height: 1.2;
-  color: #8B8B8B;
+  font-size: 11px;
+  line-height: 1.18;
   padding-bottom: 16px;
   width: 50%;
 }
@@ -52,8 +51,9 @@
   background-color: transparent;
   border: none;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.21;
+  font-size: 11px;
+  line-height: 1.18;
+  text-align: end;
 }
 
 
