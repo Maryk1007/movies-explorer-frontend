@@ -1,12 +1,12 @@
-import { moviesList } from '../../utils/moviesList';
+// import { moviesList } from '../../utils/moviesList';
 import MoviesCard from '../MoviesCard/MoviesCard'
 
-function MoviesCardList({ onSaveClick, onlySaved }) {
+function MoviesCardList({ onSaveClick, onlySaved, moviesArray }) {
   return (
       <section className="movies-cardlist">
         <ul className="movies-cardlist__wrap">
         {
-          moviesList.map((movie) => (
+          moviesArray.map((movie) => (
             <MoviesCard
               {...movie}
               key={movie._id}

@@ -1,6 +1,3 @@
-// import {useState} from "react";
-// import { Routes, Route } from "react-router-dom";
-
 function MoviesCard({ onSaveClick, onlySaved, location, ...movie}) {
 /** перевести минуты в часы и минуты */
   const toTime = (time) => {
@@ -14,14 +11,8 @@ function MoviesCard({ onSaveClick, onlySaved, location, ...movie}) {
     onSaveClick(movie)
   }
 
-  // const [checked, setChecked] = useState(false);
-
-  // const handleChange = () => {
-  //   setChecked(!checked);
-  // };
-
   return (
-      <li className="movie">
+      <li className="movie" key={movie._id}>
         <img className="movie__pic"
           src={movie.image}
           alt={movie.nameRu}/>
@@ -34,30 +25,6 @@ function MoviesCard({ onSaveClick, onlySaved, location, ...movie}) {
               <button className='movie-checkbox__custom movie-checkbox__custom_saved'></button> :
               <button onClick={handleSaveClick} className={ movie.saved ? 'movie-checkbox__custom movie-checkbox__custom_check' : 'movie-checkbox__custom' }></button>
           }
-        {/* <Routes>
-            <Route path="*" element={
-              <label className="movie-checkbox">
-                <input
-                  className="movie-checkbox__default"
-                  type='checkbox'
-                  id='movie-checkbox'
-                  defaultChecked={checked}
-                  onChange={handleChange}/>
-                  <span className="movie-checkbox__custom"></span>
-              </label>}>
-            </Route>
-            <Route path="/saved-movies" element={
-              <label className="movie-checkbox">
-                <input
-                  className="movie-checkbox__default"
-                  type='checkbox'
-                  id='movie-checkbox'
-                  defaultChecked={!checked}
-                  onChange={handleChange}/>
-                  <span className="movie-checkbox__custom_saved"></span>
-              </label>}>
-            </Route>
-          </Routes> */}
       </li>
   );
 }

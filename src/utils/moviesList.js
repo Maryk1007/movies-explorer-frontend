@@ -71,17 +71,44 @@ export const moviesList = [
     duration: "77",
     image: movie10,
     nameRu: "Соберись перед прыжком",
+    saved: true,
   },
   {
     _id: 11,
     duration: "77",
     image: movie11,
     nameRu: "Пи Джей Харви: A dog called money",
+    saved: true,
   },
   {
     _id: 12,
     duration: "77",
     image: movie12,
     nameRu: "По волнам: Искусство звука в кино",
+    saved: true,
   }
 ]
+
+// export const savedMoviesList = [
+//   {
+//     _id: 10,
+//     duration: "77",
+//     image: movie10,
+//     nameRu: "Соберись перед прыжком",
+//     saved: true,
+//   },
+//   {
+//     _id: 11,
+//     duration: "77",
+//     image: movie11,
+//     nameRu: "Пи Джей Харви: A dog called money",
+//     saved: true,
+//   },
+//   {
+//     _id: 12,
+//     duration: "77",
+//     image: movie12,
+//     nameRu: "По волнам: Искусство звука в кино",
+//     saved: true,
+//   }
+// ];
