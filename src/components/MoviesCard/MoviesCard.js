@@ -1,7 +1,7 @@
-import {useState} from "react";
-import { Routes, Route } from "react-router-dom";
+// import {useState} from "react";
+// import { Routes, Route } from "react-router-dom";
 
-function MoviesCard({location, ...movie}) {
+function MoviesCard({ onSaveClick, onlySaved, location, ...movie}) {
 /** перевести минуты в часы и минуты */
   const toTime = (time) => {
     const hours = Math.trunc(time / 60);
@@ -9,11 +9,16 @@ function MoviesCard({location, ...movie}) {
     return hours + "ч " + minutes + "м";
   };
 
-  const [checked, setChecked] = useState(false);
+  const handleSaveClick = (event) => {
+    event.preventDefault();
+    onSaveClick(movie)
+  }
 
-  const handleChange = () => {
-    setChecked(!checked);
-  };
+  // const [checked, setChecked] = useState(false);
+
+  // const handleChange = () => {
+  //   setChecked(!checked);
+  // };
 
   return (
       <li className="movie">
@@ -24,7 +29,12 @@ function MoviesCard({location, ...movie}) {
           <h2 className="movie__title">{movie.nameRu}</h2>
           <span className="movie__duration">{toTime(movie.duration)}</span>
         </div>
-        <Routes>
+        {
+            onlySaved ?
+              <button className='movie-checkbox__custom movie-checkbox__custom_saved'></button> :
+              <button onClick={handleSaveClick} className={ movie.saved ? 'movie-checkbox__custom movie-checkbox__custom_check' : 'movie-checkbox__custom' }></button>
+          }
+        {/* <Routes>
             <Route path="*" element={
               <label className="movie-checkbox">
                 <input
@@ -36,7 +46,7 @@ function MoviesCard({location, ...movie}) {
                   <span className="movie-checkbox__custom"></span>
               </label>}>
             </Route>
-            {/* <Route path="/saved-movies" element={
+            <Route path="/saved-movies" element={
               <label className="movie-checkbox">
                 <input
                   className="movie-checkbox__default"
@@ -46,8 +56,8 @@ function MoviesCard({location, ...movie}) {
                   onChange={handleChange}/>
                   <span className="movie-checkbox__custom_saved"></span>
               </label>}>
-            </Route> */}
-          </Routes>
+            </Route>
+          </Routes> */}
       </li>
   );
 }

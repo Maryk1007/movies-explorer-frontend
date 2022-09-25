@@ -40,13 +40,6 @@
   padding: 3px 4px;
 }
 
-.movie-checkbox__default {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: absolute;
-}
-
 .movie-checkbox__custom {
   position: absolute;
   top: 10px;
@@ -65,14 +58,14 @@
   border-radius: 30px;
 }
 
-.movie-checkbox__default:checked + .movie-checkbox__custom {
+.movie-checkbox__custom_check {
   background-image: url(../../images/movie_checked.svg);
   width: 21px;
   border-radius: 50px;
 }
-/*
-.movie-checkbox__default:checked + .movie-checkbox__custom_saved {
+
+.movie-checkbox__custom_saved {
   background-image: url(../../images/movie_checkbox_delete.svg);
   width: 21px;
   border-radius: 50px;
-} */
+}
