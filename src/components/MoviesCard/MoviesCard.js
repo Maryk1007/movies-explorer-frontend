@@ -1,5 +1,6 @@
+import React from 'react';
 function MoviesCard({ onSaveClick, onlySaved, location, ...movie}) {
-/** перевести минуты в часы и минуты */
+//перевести длительность фильма в часы и минуты
   const toTime = (time) => {
     const hours = Math.trunc(time / 60);
     const minutes = time - (hours * 60)
@@ -22,8 +23,8 @@ function MoviesCard({ onSaveClick, onlySaved, location, ...movie}) {
         </div>
         {
             onlySaved ?
-              <button className='movie-checkbox__custom movie-checkbox__custom_saved'></button> :
-              <button onClick={handleSaveClick} className={ movie.saved ? 'movie-checkbox__custom movie-checkbox__custom_check' : 'movie-checkbox__custom' }></button>
+              <button className="movie-checkbox__custom movie-checkbox__custom_saved"></button> :
+              <button onClick={handleSaveClick} className={ movie.saved ? "movie-checkbox__custom movie-checkbox__custom_check" : "movie-checkbox__custom" }></button>
           }
       </li>
   );

@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   yandex,
   github
@@ -9,7 +10,7 @@ function Footer({date, location}) {
     '/movies',
     '/saved-movies'
   ];
-  const classNamefooter = `footer ${footer.includes(location) ? "footer__active" : ''}`;
+  const classNamefooter = `footer ${footer.includes(location) ? "footer__active" : ""}`;
 
   return (
     <>
@@ -25,7 +26,7 @@ function Footer({date, location}) {
             </li>
           </ul>
         </nav>
-        <p className="footer__copyright">&copy;{' ' + date}</p>
+        <p className="footer__copyright">&copy;{" " + date}</p>
       </footer>
     </>
   );

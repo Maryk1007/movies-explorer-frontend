@@ -1,6 +1,7 @@
-import {useState} from "react";
-import SearchForm from "../SearchForm/SearchFrom";
-import MoviesCardList from "../MoviesCardList/MoviesCardList";
+import React from 'react';
+import {useState} from 'react';
+import SearchForm from '../SearchForm/SearchFrom';
+import MoviesCardList from '../MoviesCardList/MoviesCardList';
 
 import { moviesList } from '../../utils/moviesList';
 

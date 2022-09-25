@@ -1,4 +1,5 @@
-import { useState, useCallback } from "react";
+import React from 'react';
+import { useState, useCallback } from 'react';
 import { NavLink } from 'react-router-dom';
 
 function Login({onSubmit}) {
@@ -24,7 +25,7 @@ function Login({onSubmit}) {
         onSubmit={onSubmit}
         noValidate>
           <div className="form__container">
-            <p className='form__label'>E-mail</p>
+            <p className="form__label">E-mail</p>
             <input
               className="form__input"
               value={email || ''}
@@ -33,10 +34,10 @@ function Login({onSubmit}) {
               name="email"
               id="email-input"
               required />
-            <span className='form__field-error' id="error-email"></span>
+            <span className="form__field-error" id="error-email"></span>
           </div>
           <div className="form__container">
-            <p className='form__label'>Пароль</p>
+            <p className="form__label">Пароль</p>
             <input
               className="form__input"
               value={password || ''}
@@ -45,14 +46,14 @@ function Login({onSubmit}) {
               name="password"
               id="password-input"
               required />
-            <span className='form__field-error' id="error-password"></span>
+            <span className="form__field-error" id="error-password"></span>
           </div>
         <button
           className="form__button form__button_type_login"
           type="submit"
           name="submit">{isContentSubmitButton}</button>
       </form>
-      <p className='auth__logintip'>Еще не зарегистрированы?
+      <p className="auth__logintip">Еще не зарегистрированы?
         <NavLink to="/signup" className="auth__login-link"> Регистрация</NavLink>
       </p>
     </section>

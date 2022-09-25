@@ -1,4 +1,4 @@
-// import { moviesList } from '../../utils/moviesList';
+import React from 'react';
 import MoviesCard from '../MoviesCard/MoviesCard'
 
 function MoviesCardList({ onSaveClick, onlySaved, moviesArray }) {

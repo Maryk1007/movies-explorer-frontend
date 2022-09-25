@@ -1,7 +1,8 @@
+import React from 'react';
 import {Link} from 'react-router-dom';
 
 function Navigation({isOpen, onClose}) {
-  const classNameNavigationMenu = `navigation ${isOpen ? 'navigation__opened' : ''}`
+  const classNameNavigationMenu = `navigation ${isOpen ? "navigation__opened" : ""}`
 
   return (
     <div className={classNameNavigationMenu}>
@@ -16,7 +17,7 @@ function Navigation({isOpen, onClose}) {
         <Link to={'/saved-movies'} className="navigation__item navigation__link" onClick={onClose}>Сохранённые фильмы</Link>
       </ul>
       <div className="account">
-      <Link to={'/profile'} className='account__link' onClick={onClose}>
+      <Link to={'/profile'} className="account__link" onClick={onClose}>
         <div className="account__wrap">
         <div className="account__icon"></div>
         <p className="account__subtitle">Аккаунт</p>

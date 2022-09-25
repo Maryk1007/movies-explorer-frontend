@@ -1,3 +1,4 @@
+import React from 'react';
 import promo_logo from '../../images/promo_logo.svg';
 
 function Promo(){

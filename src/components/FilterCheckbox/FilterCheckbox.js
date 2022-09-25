@@ -1,4 +1,5 @@
-import {useState} from "react";
+import React from 'react';
+import {useState} from 'react';
 
 function FilterCheckbox() {
   const [checked, setChecked] = useState(false);
@@ -8,15 +9,15 @@ function FilterCheckbox() {
   };
 
   return (
-    <form className='filter-checkbox'>
+    <form className="filter-checkbox">
       <input
-        className='filter-checkbox__button'
-        type='checkbox'
-        id='checkbox-button'
+        className="filter-checkbox__button"
+        type="checkbox"
+        id="checkbox-button"
         defaultChecked={checked}
         onChange={handleChange}>
       </input>
-      <p className='filter-checkbox__label'>Короткометражки</p>
+      <p className="filter-checkbox__label">Короткометражки</p>
     </form>
   );
 }

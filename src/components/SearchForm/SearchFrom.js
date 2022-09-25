@@ -1,3 +1,4 @@
+import React from 'react';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 
 function SearchForm({location, onSubmit}) {
@@ -13,7 +14,7 @@ function SearchForm({location, onSubmit}) {
             placeholder="Фильм"
             required
           />
-          <button className='search__form-button' type='submit' location={location}></button>
+          <button className="search__form-button" type="submit" location={location}></button>
         </form>
         <FilterCheckbox/>
     </div>
