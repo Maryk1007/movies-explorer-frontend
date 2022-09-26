@@ -1,7 +1,6 @@
 .header {
     margin: 0;
     padding: 18px 14px;
-    display: flex;
     align-items: center;
     justify-content: space-between;
     display: none;
@@ -35,8 +34,9 @@
 }
 
 .header__list {
-    list-style: none;
-    display: flex;
+  margin: 0;
+  list-style: none;
+  display: flex;
 }
 
 .header__nav_disabled {
@@ -56,7 +56,7 @@
 .header__link {
     font-size: 10px;
     font-weight: 500;
-    line-height: 1,6;
+    line-height: 1.6;
     text-decoration: none;
     color: #FFFFFF;
     cursor: pointer;
@@ -81,4 +81,23 @@
 
 .header__burger-menu_disabled {
     display: none;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 18px 30px;
+  }
+
+  .header__nav_item {
+    margin-right: 30px;
+  }
+
+  .header__link {
+    font-size: 12px;
+    line-height: 1.33;
+  }
+
+  .header__link_type_button {
+    padding: 8px 20px;
+  }
 }

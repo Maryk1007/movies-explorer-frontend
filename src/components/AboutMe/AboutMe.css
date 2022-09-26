@@ -1,5 +1,7 @@
 .about-me {
-  margin: 70px 14px;
+  margin: 0 auto;
+  max-width: 292px;
+  margin-bottom: 70px;
 }
 
 .about-me__title {
@@ -59,4 +61,45 @@
   line-height: 1.22;
   text-decoration: none;
   color: #000000;
+}
+
+@media (min-width: 768px) {
+  .about-me {
+    max-width: 668px;
+    margin-bottom: 90px;
+    position: relative;
+  }
+
+  .about-me__title {
+    font-size: 22px;
+    margin-bottom: 66px;
+  }
+
+  .about-me__avatar {
+    width: 255px;
+    height: 307px;
+    position: absolute;
+    right: 0;
+    margin: 0;
+  }
+
+  .about-me__name {
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 16px;
+    max-width: 364px;
+  }
+
+  .about-me__description {
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 364px;
+  }
+
+  .about-me__biography {
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 364px;
+    margin-bottom: 69px;
+  }
 }
