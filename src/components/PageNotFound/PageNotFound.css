@@ -9,13 +9,15 @@
 }
 
 .pagenotfound__title {
+  margin: 0;
   font-weight: 400;
   font-size: 80px;
-  line-height: 1.22;
+  line-height: 1.21;
   margin-bottom: 10px;
 }
 
 .pagenotfound__subtitle {
+  margin: 0;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.25;
@@ -31,4 +33,27 @@
   color: #3456F3;
   position: absolute;
   bottom: 30px;
+  transition: opacity .3s ease-in;
+}
+
+.pagenotfound__link:hover {
+  opacity: .6;
+}
+
+@media (min-width: 768px) {
+  .pagenotfound__title {
+    font-size: 140px;
+    margin-bottom: 5px;
+  }
+
+  .pagenotfound__subtitle {
+    font-size: 16px;
+  line-height: 1.19;
+  }
+
+  .pagenotfound__link {
+    font-size: 14px;
+    line-height: 1.21;
+    bottom: 222px;
+  }
 }
