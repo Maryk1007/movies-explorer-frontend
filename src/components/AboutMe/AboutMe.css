@@ -61,6 +61,11 @@
   line-height: 1.22;
   text-decoration: none;
   color: #000000;
+  transition: opacity .3s ease-in;
+}
+
+.about-me__link:hover {
+  opacity: .6;
 }
 
 @media (min-width: 768px) {

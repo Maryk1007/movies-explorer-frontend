@@ -14,6 +14,11 @@
     width: 38px;
     height: 38px;
     cursor: pointer;
+    transition: opacity .3s ease-in;
+}
+
+.logo:hover {
+  opacity: .6;
 }
 
 .header__main {
@@ -60,6 +65,11 @@
     text-decoration: none;
     color: #FFFFFF;
     cursor: pointer;
+    transition: opacity .3s ease-in;
+}
+
+.header__link:hover {
+  opacity: .6;
 }
 
 .header__link_type_button {

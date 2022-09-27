@@ -38,6 +38,11 @@
   justify-content: space-between;
   text-decoration: none;
   color: #000000;
+  transition: opacity .3s ease-in;
+}
+
+.portfolio__link:hover {
+  opacity: .6;
 }
 
 .portfolio__subtitle {
