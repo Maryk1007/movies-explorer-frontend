@@ -105,6 +105,15 @@
 }
 
 @media (min-width: 768px) {
+  .profile {
+    margin: 236px 30px 40px;
+  }
+
+  .profile__title {
+    margin-top: 0;
+    margin-bottom: 96px;
+  }
+
   .form-profile {
     min-width: 396px;
   }
