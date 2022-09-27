@@ -1,21 +1,33 @@
 .navigation {
-  min-width: 100%;
-  min-height: 100vh;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+  display: flex;
+  visibility: hidden;
   opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s ease-in;
   position: fixed;
   top: 0;
-  right: 0;
-  background-color: #FFFFFF;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  width: 100vw;
+  height: 100vh;
   z-index: 2;
 }
 
-.navigation__opened {
+.navigation__container {
+  min-width: 67.7%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+.navigation__opened {
+  visibility: visible;
   opacity: 1;
+  transition: opacity 0.5s, visibility 0s ease-in;
 }
 
 .navigation__button-close {

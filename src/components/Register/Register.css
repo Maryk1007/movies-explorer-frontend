@@ -85,7 +85,7 @@
 }
 
 .form__button:hover {
-  opacity: .8;
+  opacity: .6;
 }
 
 .auth__logintip {
@@ -121,5 +121,20 @@
 
   .form__button_type_register {
     margin-top: 134px;
+  }
+
+  .form__button {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+
+  .auth__logintip {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+
+  .auth__login-link {
+    font-size: 14px;
+    line-height: 1.21;
   }
 }

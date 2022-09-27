@@ -88,6 +88,12 @@
     height: 43px;
     border: none;
     background: transparent url(../../images/burger_menu.svg) no-repeat center;
+    cursor: pointer;
+    transition: opacity .3s ease-in;
+}
+
+.header__burger-menu:hover {
+  opacity: .6;
 }
 
 .header__burger-menu_disabled {

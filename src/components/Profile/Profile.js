@@ -40,7 +40,7 @@ function Profile({onSubmit}) {
           type="submit"
           name="submit">Редактировать</button>
       </form>
-      <p className="auth__logintip">
+      <p className="auth__logouttip">
       <NavLink to="/" className="auth__logout">Выйти из аккаунта</NavLink>
       </p>
     </section>
