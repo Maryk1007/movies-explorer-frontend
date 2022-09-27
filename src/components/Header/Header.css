@@ -30,6 +30,7 @@
 }
 
 .header__sign {
+  margin: 0 auto;
   background-color: #FFFFFF;
   padding: 56px 141px 50px;
 }
@@ -109,5 +110,9 @@
 
   .header__link_type_button {
     padding: 8px 20px;
+  }
+
+  .header__sign {
+    padding: 232px 544px  40px 186px;
   }
 }

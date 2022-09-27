@@ -1,5 +1,5 @@
 .search {
-  margin: 80px 14px 10px;
+  margin: 80px 14px 50px;
   border-bottom: 1px solid #E8E8E8;
 }
 
@@ -38,4 +38,10 @@
   background-image: url(../../images/search_icon.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media (min-width: 768px) {
+  .search {
+    margin: 80px 30px 80px;
+  }
 }

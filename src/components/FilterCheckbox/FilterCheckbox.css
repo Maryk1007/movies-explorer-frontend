@@ -53,3 +53,13 @@
   font-size: 11px;
   line-height: 1.64;
 }
+
+@media (min-width: 768px) {
+  .filter-checkbox {
+    padding: 41px 0 40px;
+  }
+  .filter-checkbox__label {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}

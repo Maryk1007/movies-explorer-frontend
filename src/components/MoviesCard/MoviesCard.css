@@ -32,8 +32,8 @@
 
 .movie__duration {
   font-weight: 400;
-  font-size: 10px;
-  line-height: 1.2;
+  font-size: 11px;
+  line-height: 0.9;
   color: #A0A0A0;
   background-color: #F9F9F9;
   border-radius: 3px;
@@ -68,4 +68,26 @@
   background-image: url(../../images/movie_checkbox_delete.svg);
   width: 21px;
   border-radius: 50px;
+}
+
+@media (min-width: 768px) {
+  .movie {
+    margin: 0;
+    width: 339px;
+    padding-bottom: 47px;
+  }
+
+  .movie:last-of-type {
+    padding-bottom: 47px;
+  }
+
+  .movie__pic {
+    height: 190px;
+    margin-bottom: 25px;
+  }
+
+  .movie__title {
+    font-size: 13px;
+    line-height: 1.23;
+  }
 }
