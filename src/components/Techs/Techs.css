@@ -84,11 +84,31 @@
 
   .techs__grid {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     padding: 0;
   }
 
   .techs__grid_subtitle {
     min-width: 84px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .techs {
+    max-width: 1140px;
+    padding: 100px 70px;
+  }
+
+  .techs__title {
+    margin-bottom: 90px;
+  }
+
+  .techs__subtitle {
+    margin-bottom: 26px;
+  }
+
+  .techs__text {
+    margin-bottom: 100px;
   }
 }

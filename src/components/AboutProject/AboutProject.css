@@ -120,3 +120,32 @@
   line-height: 1.21;
   }
 }
+
+@media (min-width: 1280px) {
+  .about-project {
+    max-width: 1140px;
+    margin-bottom: 110px;
+  }
+
+  .about-project__item {
+    max-width: 550px;
+  }
+
+  .about-project__grid {
+    grid-template-columns: 228px 912px;
+    gap: 14px 0;
+  }
+
+  .about-project__subtitle {
+    margin-bottom: 26px;
+  }
+
+  .about-project__paragraph {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+
+  .about-project__list {
+    margin-bottom: 110px;
+  }
+}

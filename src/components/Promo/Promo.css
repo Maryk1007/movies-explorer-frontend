@@ -49,3 +49,19 @@
     margin-bottom: 70px;
   }
 }
+
+@media (min-width: 768px) {
+  .promo {
+    padding-top: 50px;
+  }
+
+  .promo__title {
+    margin: 0 0 102px 70px;
+    text-align: start;
+  }
+
+  .promo__logo {
+    margin: 0 70px 60px 0;
+    align-self: flex-end;
+  }
+}

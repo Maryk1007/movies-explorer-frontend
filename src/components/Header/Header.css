@@ -124,15 +124,11 @@
 }
 
 @media (min-width: 1280px) {
-  .header__main {
-    margin: 0 70px;
+  .header {
+    padding: 18px 70px;
   }
 
   .header__burger-menu {
     display: none;
-  }
-
-  .header__sign {
-    padding: 70px 544px 40px 186px;
   }
 }
