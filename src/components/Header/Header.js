@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
@@ -49,9 +50,26 @@ function Header({ location }) {
         </ul>
       </nav>
       <button className={classNameBurgerMenu} type="button" onClick={openNavigationMenu}></button>
-      <Navigation
-        isOpen={isNavigationMenuOpen}
-        onClose={closeNavigationMenu}/>
+      <Routes>
+        <Route path='/movies' element={
+          <Navigation
+          isOpen={isNavigationMenuOpen}
+          onClose={closeNavigationMenu}/>
+        }>
+        </Route>
+        <Route path='/saved-movies' element={
+          <Navigation
+          isOpen={isNavigationMenuOpen}
+          onClose={closeNavigationMenu}/>
+        }>
+        </Route>
+        <Route path='/profile' element={
+          <Navigation
+          isOpen={isNavigationMenuOpen}
+          onClose={closeNavigationMenu}/>
+        }>
+        </Route>
+      </Routes>
     </header>
   );
 }
