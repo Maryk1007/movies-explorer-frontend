@@ -45,3 +45,9 @@
     margin: 80px 30px 80px;
   }
 }
+
+@media (min-width: 1280px) {
+  .search {
+    margin: 80px 70px 80px;
+  }
+}

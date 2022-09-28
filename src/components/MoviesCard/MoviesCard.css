@@ -91,3 +91,18 @@
     line-height: 1.23;
   }
 }
+
+@media (min-width: 1280px) {
+  .movie {
+    width: 360px;
+    padding-bottom: 57px;
+  }
+  .movie:last-of-type {
+    padding-bottom: 57px;
+  }
+
+  .movie__pic {
+    height: 201px;
+    margin-bottom: 14px;
+  }
+}

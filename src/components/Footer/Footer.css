@@ -101,3 +101,9 @@
     line-height: 1.23;
   }
 }
+
+@media (min-width: 1280px) {
+  .footer {
+    margin: 0 70px 20px;
+  }
+}

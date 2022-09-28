@@ -122,3 +122,13 @@
     padding: 232px 544px  40px 186px;
   }
 }
+
+@media (min-width: 1280px) {
+  .header__main {
+    margin: 0 70px;
+  }
+
+  .header__burger-menu {
+    display: none;
+  }
+}

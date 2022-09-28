@@ -18,7 +18,13 @@
 
 @media (min-width: 768px) {
   .movies__button {
-    min-width: calc(100% - 448px);
+    min-width: 320px;
     margin: 0 224px 80px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .movies__button {
+    margin: 0 480px 80px;
   }
 }

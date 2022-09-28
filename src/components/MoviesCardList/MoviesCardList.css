@@ -20,3 +20,13 @@
     max-width: 708px;
   }
 }
+
+@media (min-width: 1280px) {
+  .movies-cardlist {
+    margin-bottom: 21px;
+  }
+
+  .movies-cardlist__wrap {
+    max-width: 1140px;
+  }
+}
