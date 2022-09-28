@@ -129,3 +129,13 @@
     line-height: 1.23;
   }
 }
+
+@media (min-width: 768px) {
+  .profile {
+    margin: 74px 70px 70px;
+  }
+
+  .form-profile {
+    min-width: 410px;
+  }
+}
