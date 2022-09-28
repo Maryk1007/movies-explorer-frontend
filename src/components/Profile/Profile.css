@@ -115,7 +115,7 @@
   }
 
   .form-profile {
-    min-width: 396px;
+    min-width: 410px;
   }
 
   .form__button_type_profile {
@@ -133,9 +133,5 @@
 @media (min-width: 768px) {
   .profile {
     margin: 74px 70px 70px;
-  }
-
-  .form-profile {
-    min-width: 410px;
   }
 }

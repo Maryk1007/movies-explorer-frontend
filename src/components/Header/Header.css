@@ -131,4 +131,8 @@
   .header__burger-menu {
     display: none;
   }
+
+  .header__sign {
+    padding: 70px 544px 40px 186px;
+  }
 }

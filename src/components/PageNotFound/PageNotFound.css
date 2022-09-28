@@ -48,12 +48,18 @@
 
   .pagenotfound__subtitle {
     font-size: 16px;
-  line-height: 1.19;
+    line-height: 1.19;
   }
 
   .pagenotfound__link {
     font-size: 14px;
     line-height: 1.21;
     bottom: 222px;
+  }
+}
+
+@media (min-width: 768px) {
+  .pagenotfound__link {
+    bottom: 60px;
   }
 }
