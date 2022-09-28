@@ -99,11 +99,17 @@
     left: 0;
     font-size: 13px;
     line-height: 1.23;
+    color: #000000;
   }
 }
 
 @media (min-width: 1280px) {
   .footer {
     margin: 0 70px 20px;
+  }
+
+  .footer__title {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
 }

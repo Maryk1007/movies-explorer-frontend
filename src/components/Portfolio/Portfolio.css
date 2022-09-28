@@ -90,3 +90,15 @@
     background-size: 18px;
   }
 }
+
+@media (min-width: 1280px) {
+  .portfolio {
+    max-width: 1140px;
+    margin-bottom: 125px;
+  }
+
+  .portfolio__subtitle {
+    font-size: 30px;
+    line-height: 1.67;
+  }
+}
