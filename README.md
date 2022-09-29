@@ -4,7 +4,8 @@
 
 * Публичный IPv4 сервера: 51.250.12.84  
 * Ссылка на Backend проекта: maryk.movies.nomorepartiesxyz.ru  
-* Ссылка на макет: https://www.figma.com/file/LMFyjPMSCXwhuKTj2yTt8p/Diploma-Web-development?node-id=704%3A717
+* Ссылка на макет: https://www.figma.com/file/dmVOJxCTN4IxULc5qM9eS8/Diploma-Web-development?node-id=891%3A3857  
+* Ссылка на макет на ЯндексюДиске: https://disk.yandex.ru/d/Q31nCCvAYCbNlw
 
 ### Стэк:  
 * React 
