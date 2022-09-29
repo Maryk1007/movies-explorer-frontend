@@ -1,5 +1,4 @@
 import React from 'react';
-import avatar from '../../images/avatar.jpg';
 import { github } from '../../utils/constants';
 
 function AboutMe() {
@@ -8,7 +7,7 @@ function AboutMe() {
       <h2 className="about-me__title">Студент</h2>
       <img
         className="about-me__avatar"
-        src={avatar}
+        src=""
         alt="Аватар студента"
       />
       <h3 className="about-me__name">Мария</h3>
