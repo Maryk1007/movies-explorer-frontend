@@ -1,6 +1,7 @@
 .about-project {
   margin: 0 auto;
-  max-width: 292px;
+  min-width: 292px;
+  max-width: 600px;
   margin-bottom: 140px;
 }
 
@@ -10,7 +11,7 @@
   font-size: 18px;
   line-height: 1.25;
   letter-spacing: -0.04em;
-  margin-bottom: 60px;
+  margin: 0 18px 60px;
   text-align: start;
   padding-bottom: 28px;
   border-bottom: 1px solid #000000;
@@ -18,7 +19,7 @@
 
 .about-project__list {
   list-style-type: none;
-  margin: 0;
+  margin: 0 18px 0;
   padding: 0;
   margin-bottom: 62px;
 }
