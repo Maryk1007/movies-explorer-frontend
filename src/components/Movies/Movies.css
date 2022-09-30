@@ -1,0 +1,30 @@
+.movies {
+  flex: 1;
+}
+
+.movies__button {
+  margin: 0 40px;
+  padding: 0;
+  background: #FFFFFF;
+  border-radius: 6px;
+  min-width: calc(100% - 80px);
+  height: 36px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 125%;
+  margin-bottom: 80px;
+  border: 1px solid #E8E8E8;
+}
+
+@media (min-width: 768px) {
+  .movies__button {
+    min-width: 320px;
+    margin: 0 224px 80px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .movies__button {
+    margin: 0 480px 80px;
+  }
+}
