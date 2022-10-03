@@ -23,8 +23,8 @@ function MoviesCard({ onSaveClick, onlySaved, location, ...movie}) {
         </div>
         {
             onlySaved ?
-              <button className="movie-checkbox__custom movie-checkbox__custom_saved"></button> :
-              <button onClick={handleSaveClick} className={ movie.saved ? "movie-checkbox__custom movie-checkbox__custom_check" : "movie-checkbox__custom" }></button>
+              <button className="movie-checkbox__custom movie-checkbox__custom_saved" type="button"></button> :
+              <button onClick={handleSaveClick} className={ movie.saved ? "movie-checkbox__custom movie-checkbox__custom_check" : "movie-checkbox__custom" } type="button"></button>
           }
       </li>
   );

@@ -10,6 +10,7 @@ function Navigation({isOpen, onClose}) {
         <button
           className="navigation__button-close"
           aria-label="Кнопка закрытия меню"
+          type="button"
           onClick={onClose}>
         </button>
         <ul className="navigation__list">
