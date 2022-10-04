@@ -1,4 +1,4 @@
-import React, { useState, } from 'react';
+import React from 'react';
 import { Routes, Route,useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
@@ -13,17 +13,6 @@ import PageNotFound from '../PageNotFound/PageNotFound';
 
 function App() {
   const { pathname } = useLocation();
-  const [isNavigationMenuOpen, setIsNavigationMenuOpen] = useState(false);
-
-  //открыть меню навигации
-  const handleBurgerMenuClick = () => {
-    setIsNavigationMenuOpen(true);
-  };
-
-  // закрыть меню навигации
-  const closeNavigationMenu = () => {
-    setIsNavigationMenuOpen(false);
-  }
 
   const handleSubmit = (evt)=>{
     evt.preventDefault();
@@ -38,9 +27,6 @@ function App() {
     <div className="page">
       <Header
         location={pathname}
-        onClick={handleBurgerMenuClick}
-        isOpen={isNavigationMenuOpen}
-        onClose={closeNavigationMenu}
       />
       <Routes>
         <Route exact path="/"
