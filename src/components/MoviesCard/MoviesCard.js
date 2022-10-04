@@ -20,7 +20,7 @@ function MoviesCard({ onSaveClick, onDeleteClick, onlySaved, location, ...movie}
   }
 
   return (
-      <li className="movie" key={movie._id}>
+      <li className="movie" key={movie.id}>
         <a className='movie__trailer' href={movie.trailerLink} target="_blank" rel="noopener noreferrer">
           <img className="movie__pic"
             src={movie.image}
