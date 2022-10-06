@@ -14,6 +14,7 @@ import PageNotFound from '../PageNotFound/PageNotFound';
 function App() {
   const { pathname } = useLocation();
 
+
   const handleSubmit = (evt)=>{
     evt.preventDefault();
   }
@@ -33,24 +34,29 @@ function App() {
           element={<Main location={pathname}/>}>
         </Route>
         <Route exact path="/movies"
-          element={<Movies location={pathname}/>}
-          onSubmit={handleSubmit}>
+          element={<Movies
+          location={pathname}
+          onSubmit={handleSubmit}/>}>
         </Route>
         <Route exact path="/saved-movies"
-          element={<SavedMovies location={pathname}/>}
-          onSubmit={handleSubmit}>
+          element={<SavedMovies
+            location={pathname}
+            onSubmit={handleSubmit}/>}>
         </Route>
         <Route path="/signup"
-          element={<Register location={pathname}/>}
-          onSubmit={handleSubmit}>
+          element={<Register
+            location={pathname}
+            onSubmit={handleSubmit}/>}>
         </Route>
         <Route path="/signin"
-          element={<Login location={pathname}/>}
-          onSubmit={handleSubmit}>
+          element={<Login
+            location={pathname}
+            onSubmit={handleSubmit}/>}>
         </Route>
         <Route path="/profile"
-          element={<Profile location={pathname}/>}
-          onSubmit={handleSubmit}>
+          element={<Profile
+            location={pathname}
+            onSubmit={handleSubmit}/>}>
         </Route>
         <Route exact path="*"
           element={<PageNotFound/>}>
