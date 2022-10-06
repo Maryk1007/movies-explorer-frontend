@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route,useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
@@ -13,6 +13,8 @@ import PageNotFound from '../PageNotFound/PageNotFound';
 
 function App() {
   const { pathname } = useLocation();
+
+  const [checked, setChecked] = useState(false);
 
 
   const handleSubmit = (evt)=>{
@@ -36,7 +38,9 @@ function App() {
         <Route exact path="/movies"
           element={<Movies
           location={pathname}
-          onSubmit={handleSubmit}/>}>
+          onSubmit={handleSubmit}
+          checked={checked}
+          setChecked={setChecked}/>}>
         </Route>
         <Route exact path="/saved-movies"
           element={<SavedMovies

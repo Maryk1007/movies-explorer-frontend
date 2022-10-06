@@ -5,7 +5,7 @@ import MoviesCardList from '../MoviesCardList/MoviesCardList';
 
 import { moviesList } from '../../utils/moviesList';
 
-function Movies({location, onSubmit}) {
+function Movies({location, onSubmit, checked, setChecked}) {
 
   const [moviesArray, setMoviesArray] = useState(moviesList);
   const onSaveClick = (movie) => {
@@ -24,6 +24,8 @@ function Movies({location, onSubmit}) {
         <SearchForm
           location={location}
           onSubmit={onSubmit}
+          checked={checked}
+          setChecked={setChecked}
         />
         <MoviesCardList moviesArray={ moviesArray } onSaveClick={ onSaveClick } onlySaved={ false }/>
         <button className="movies__button" type="button">Ещё</button>
