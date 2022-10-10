@@ -1,5 +1,5 @@
 import React from 'react';
-function MoviesCard({ onSaveClick, onDeleteClick, onlySaved, location, ...movie}) {
+function MoviesCard({ onSaveClick, onDeleteClick, onlySaved, movie}) {
 //перевести длительность фильма в часы и минуты
   const toTime = (time) => {
     const hours = Math.trunc(time / 60);

@@ -13,7 +13,8 @@ function FilterCheckbox({ checked, setChecked }) {
         type="checkbox"
         id="checkbox-button"
         defaultChecked={checked}
-        onChange={handleChange}>
+        onChange={handleChange}
+        value={`${checked}`}>
       </input>
       <p className="filter-checkbox__label">Короткометражки</p>
     </form>

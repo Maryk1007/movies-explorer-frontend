@@ -8,15 +8,6 @@ class MainApi {
   //проверить ответ
   _checkResponse = (res) => res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
 
-
-  // //установить заголовок
-  // _getHeaders() {
-  //   return {
-  //     authorization: `Bearer ${localStorage.getItem('jwt')}`,
-  //     ...this._headers,
-  //   };
-  // }
-
   //получить данные пользователя
   getProfile() {
     return fetch(`${this._baseUrl}/users/me`, {

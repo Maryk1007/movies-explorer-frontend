@@ -16,11 +16,11 @@ function MoviesCardList({ onSaveClick, onDeleteClick, onlySaved, moviesArray, is
           {
             moviesArray.map((movie) => (
               <MoviesCard
-                {...movie}
-                key={movie.id || movie.movieId}
-                onSaveClick={onSaveClick}
-                onDeleteClick={onDeleteClick}
-                onlySaved={onlySaved}
+              key={movie.id || movie.movieId}
+              movie={movie}
+              onSaveClick={onSaveClick}
+              onDeleteClick={onDeleteClick}
+              onlySaved={onlySaved}
               />
             ))
           }

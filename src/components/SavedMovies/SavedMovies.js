@@ -1,30 +1,50 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import SearchForm from '../SearchForm/SearchFrom';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 
-import { moviesList } from '../../utils/moviesList';
+import { MOVIES_URL } from '../../utils/config';
+import { filterByKeyword, filterByCheckbox, updateMoviesImage } from '../../utils/MoviesToolFilter';
 
-function SavedMovies({location, onSubmit}) {
-  const [moviesArray, setMoviesArray] = useState(moviesList);
-  const onSaveClick = (movie) => {
-    const newArray = []
-    moviesList.forEach((item) => {
-      if (movie._id === item._id) {
-        movie.saved = !movie.saved
-      }
-      newArray.push(item);
-    })
-    setMoviesArray(newArray);
+
+function SavedMovies({moviesArray, onDeleteClick}) {
+
+
+  const [keyword, setKeyword] = useState('');
+  const [checked, setChecked] = useState(false);
+  const [renderMovies, setRenderMovies] = useState(moviesArray);
+  const [filteredMovies, setFilteredMovies] = useState([]);
+
+  useEffect(() => {
+    const updatedMovies = updateMoviesImage(moviesArray, MOVIES_URL);
+    setRenderMovies(updatedMovies);
+    setFilteredMovies(updatedMovies);
+  }, [moviesArray])
+
+  const onSearch = (word, checkbox) => {
+    const keywordFilteredMovies = filterByKeyword(renderMovies, keyword, ['nameRU', 'nameEN']);
+    const checkedFilteredMovies = filterByCheckbox(keywordFilteredMovies, checked);
+    setKeyword(word);
+    setChecked(checkbox);
+    setFilteredMovies(checkedFilteredMovies);
+  }
+
+  const onOnlyShorts = (checkbox) => {
+    const keywordFilteredMovies = filterByKeyword(renderMovies, keyword, ['nameRU', 'nameEN']);
+    const checkedFilteredMovies = filterByCheckbox(keywordFilteredMovies, checked);
+    setChecked(checkbox);
+    setFilteredMovies(checkedFilteredMovies);
   }
 
   return (
       <section className="movies">
         <SearchForm
-          location={location}
-          onSubmit={onSubmit}
+          keyword=''
+          checked={checked}
+          onSearch={onSearch}
+          onOnlyShorts={onOnlyShorts}
         />
-        <MoviesCardList moviesArray={ moviesArray } onSaveClick={ onSaveClick } onlySaved={ true }/>
+        <MoviesCardList moviesArray={filteredMovies} onDeleteClick={ onDeleteClick } listHidden={false} isLoading={false} onlySaved={ true }/>
       </section>
   );
 }
