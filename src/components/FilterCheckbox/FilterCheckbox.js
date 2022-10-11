@@ -1,8 +1,6 @@
 import React from 'react';
-import {useState} from 'react';
 
-function FilterCheckbox() {
-  const [checked, setChecked] = useState(false);
+function FilterCheckbox({ checked, setChecked }) {
 
   const handleChange = () => {
     setChecked(!checked);
@@ -15,7 +13,8 @@ function FilterCheckbox() {
         type="checkbox"
         id="checkbox-button"
         defaultChecked={checked}
-        onChange={handleChange}>
+        onChange={handleChange}
+        value={`${checked}`}>
       </input>
       <p className="filter-checkbox__label">Короткометражки</p>
     </form>

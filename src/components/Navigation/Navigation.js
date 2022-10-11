@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-function Navigation({isOpen, onClose}) {
+function Navigation({isOpen, onClose, loggedIn}) {
   const classNameNavigationMenu = `navigation ${isOpen ? "navigation__opened" : ""}`
 
   return (
@@ -10,6 +10,7 @@ function Navigation({isOpen, onClose}) {
         <button
           className="navigation__button-close"
           aria-label="Кнопка закрытия меню"
+          type="button"
           onClick={onClose}>
         </button>
         <ul className="navigation__list">

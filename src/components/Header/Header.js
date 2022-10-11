@@ -6,7 +6,7 @@ import Navigation from '../Navigation/Navigation';
 import logo from '../../images/logo.svg';
 
 
-function Header({ location }) {
+function Header({ location, loggedIn }) {
 
   const headerPromo = '/';
 
@@ -26,7 +26,7 @@ function Header({ location }) {
       headerTypeSign.includes(location) ? 'header__sign header_active' : ""
     }`;
 
-    const classNameBurgerMenu=`${headerMain.includes(location) ? "header__burger-menu" : "header__burger-menu_disabled"}`;
+    const classNameBurgerMenu=`${headerMain.includes(location) && loggedIn ? "header__burger-menu" : "header__burger-menu_disabled"}`;
     const classNameNavigationMenu=`${headerPromo.includes(location) ? "header__nav" : "header__nav header__nav_disabled"}`;
 
     const [isNavigationMenuOpen, setIsNavigationMenuOpen] = useState(false);
@@ -54,7 +54,8 @@ function Header({ location }) {
         <Route path='/movies' element={
           <Navigation
           isOpen={isNavigationMenuOpen}
-          onClose={closeNavigationMenu}/>
+          onClose={closeNavigationMenu}
+          loggedIn={loggedIn}/>
         }>
         </Route>
         <Route path='/saved-movies' element={

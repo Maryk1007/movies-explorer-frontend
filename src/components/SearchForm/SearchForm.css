@@ -38,6 +38,12 @@
   background-image: url(../../images/search_icon.svg);
   background-repeat: no-repeat;
   background-position: center;
+  transition: opacity .3s ease-in;
+  cursor: pointer;
+}
+
+.search__form-button:hover {
+  opacity: .6;
 }
 
 @media (min-width: 768px) {

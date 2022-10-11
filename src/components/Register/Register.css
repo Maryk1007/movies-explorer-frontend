@@ -80,6 +80,7 @@
   cursor: pointer;
   transition: opacity .3s ease-in;
 }
+
 .form__button_type_register {
   margin-top: 222px;
 }
